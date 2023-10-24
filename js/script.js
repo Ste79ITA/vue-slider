@@ -48,6 +48,9 @@ createApp({
         this.currentIndex = this.slides.length - 1;
       }
     },
+    currentThumb(index) {
+      this.currentIndex = index;
+    },
   },
   mounted() {
     console.log(this.slides.length);
