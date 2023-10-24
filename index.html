@@ -24,8 +24,18 @@
           </div>
 
           <div class="thumbs">
-            <div class="prev" @click="prevSlide()"></div>
-            <div class="next" @click="nextSlide()"></div>
+            <div
+              class="prev"
+              @click="prevSlide()"
+              @mouseenter="clearAutoPlay()"
+              @mouseleave="autoPlay()"
+            ></div>
+            <div
+              class="next"
+              @click="nextSlide()"
+              @mouseenter="clearAutoPlay()"
+              @mouseleave="autoPlay()"
+            ></div>
             <div
               class="thumb"
               :class="index === currentIndex ? 'active' : '' "
